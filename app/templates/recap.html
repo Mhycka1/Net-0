@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div">
+        <span class="span">
+          <span class="span-2">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/9db8edee16661b8a35a2df239af0ff3edf73e948b0782c66d9fcadf9b7585ee2?apiKey=34423a3db8264880891cb34c59457a19&"
+              class="img"
+            />
+            <div class="div-2">Monthly Recap</div>
+          </span>
+          <div class="div-3">
+            This page gives you an overview of your progress towards being consistent
+            in lowering your carbon footprint! Click a date on the calendar to show
+            what suggestions you completed that day and past streak information.
+          </div>
+        </span>
+        <div class="div-4">
+          <span class="span-3">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/527c4781e3678bcc48fe955db7f6733c077576d006d9c42c45078e12e66da95f?apiKey=34423a3db8264880891cb34c59457a19&"
+              class="img-2"
+            />
+            <div class="div-5">January 2024</div>
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/286758944b4d85618a53a80946a640481f73d779778a091926c45e0720cd8a9e?apiKey=34423a3db8264880891cb34c59457a19&"
+              class="img-3"
+            />
+          </span>
+          <span class="span-4">
+            <div class="div-6">Su</div>
+            <div class="div-7">Mo</div>
+            <div class="div-8">Tu</div>
+            <div class="div-9">We</div>
+            <div class="div-10">Th</div>
+            <div class="div-11">Fr</div>
+            <div class="div-12">Sa</div>
+          </span>
+          <span class="span-5">
+            <!-- Add clickable days here -->
+            <div class="div-13" onclick="showDayDetails(1)">31</div>
+            <div class="div-14" onclick="showDayDetails(2)">1</div>
+            <div class="div-15" onclick="showDayDetails(3)">2</div>
+            <div class="div-16" onclick="showDayDetails(4)">3</div>
+            <div class="div-17" onclick="showDayDetails(5)">4</div>
+            <div class="div-18" onclick="showDayDetails(6)">5</div>
+            <div class="div-19" onclick="showDayDetails(7)">6</div>
+          </span>
+          <!-- Continue with the rest of the calendar -->
+          <!-- ... -->
+
+          <span class="span-6">
+            <!-- Add more clickable days here -->
+          </span>
+        </div>
+        <div class="div-56">
+          <span class="span-11">
+            <div class="div-57">Stats:</div>
+            <div class="div-58">
+              19/31 days completed!
+              <br />
+              Longest streak: 5 days
+              <br />
+              Longest group streak: 16 days
+            </div>
+          </span>
+          <div class="div-59"></div>
+        </div>
+        <div class="div-60">
+          <!-- Make the images clickable buttons -->
+          <a href="/main_dashboard" onclick="handleImageClick('image-4')">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d099d8f46de6b65aac66ca8537fb929d94a14b979a8efa8e2980ad2aeaa444b1?apiKey=34423a3db8264880891cb34c59457a19&"
+              class="img-4"
+            />
+          </a>
+          <a href="/groups" onclick="handleImageClick('image-5')">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/715ca5254f87c19e122ef70d6a55c4d5e4c95f6e5a5833d513d2b1b72f56774c?apiKey=34423a3db8264880891cb34c59457a19&"
+              class="img-5"
+            />
+          </a>
+          <a href="/recap" onclick="handleImageClick('image-6')">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/6cbf2465e3b5c10481a863b7a3e718bdc0dcc125c81175345af257b9b51aef12?apiKey=34423a3db8264880891cb34c59457a19&"
+              class="img-6"
+            />
+          </a>
+        </div>
+      </div>
+      <style>
+        .div {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #fff;
+          display: flex;
+          max-width: 480px;
+          width: 100%;
+          padding-bottom: 22px;
+          flex-direction: column;
+          margin: 0 auto;
+        }
+        .span {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #d5eee8;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          padding: 27px 17px 50px;
+        }
+        .span-2 {
+          display: flex;
+          align-items: start;
+          justify-content: space-between;
+          gap: 12px;
+        }
+        .img {
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+          width: 42px;
+          overflow: hidden;
+          max-width: 100%;
+        }
+        .div-2 {
+          color: #000;
+          margin-top: 8px;
+          flex-grow: 1;
+          white-space: nowrap;
+          font: 700 40px Open Sans, sans-serif;
+        }
+        .div-3 {
+          color: #000;
+          letter-spacing: 0.09px;
+          margin: 5px 0 18px;
+          font: 500 18px Inter, sans-serif;
+        }
+        .div-4 {
+          align-items: flex-start;
+          border-radius: var(--Advanced-Forms-Datepicker-Border-Radius, 12px);
+          border: 1px solid var(--Advanced-Forms-Datepicker-Border-Color, #e5e7eb);
+          box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.15);
+          background-color: var(--Advanced-Forms-Datepicker-Bg-Color, #fff);
+          align-self: center;
+          z-index: 1;
+          display: flex;
+          margin-top: -46px;
+          width: 100%;
+          max-width: 362px;
+          padding-top: 20px;
+          flex-direction: column;
+        }
+        .span-3 {
+          justify-content: space-between;
+          align-items: start;
+          align-self: center;
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          display: flex;
+          width: 100%;
+          max-width: 322px;
+          gap: 20px;
+          padding: 0 20px;
+        }
+        .img-2 {
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+          width: 24px;
+          overflow: hidden;
+          align-self: stretch;
+          max-width: 100%;
+        }
+        .div-5 {
+          color: var(--Advanced-Forms-Datepicker-Month-Color, #1f2937);
+          letter-spacing: 0.09px;
+          font: 500 18px Inter, sans-serif;
+        }
+        .img-3 {
+          aspect-ratio: 0.67;
+          object-fit: contain;
+          object-position: center;
+          width: 16px;
+          overflow: hidden;
+          align-self: stretch;
+          max-width: 100%;
+        }
+        .span-4 {
+          border-radius: var(
+            --Advanced-Forms-Datepicker-Week-Names-Inline-List-Border-Radius,
+            999px
+          );
+          align-self: center;
+          display: flex;
+          width: 100%;
+          max-width: 322px;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 20px 14px;
+        }
+        .div-6 {
+          color: var(--Advanced-Forms-Datepicker-Weekdate-Color, #6b7280);
+          letter-spacing: 0.07px;
+          flex-grow: 1;
+          white-space: nowrap;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-7 {
+          color: var(--Advanced-Forms-Datepicker-Weekdate-Color, #6b7280);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-8 {
+          color: var(--Advanced-Forms-Datepicker-Weekdate-Color, #6b7280);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-9 {
+          color: var(--Advanced-Forms-Datepicker-Weekdate-Color, #6b7280);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-10 {
+          color: var(--Advanced-Forms-Datepicker-Weekdate-Color, #6b7280);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-11 {
+          color: var(--Advanced-Forms-Datepicker-Weekdate-Color, #6b7280);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-12 {
+          color: var(--Advanced-Forms-Datepicker-Weekdate-Color, #6b7280);
+          letter-spacing: 0.07px;
+          flex-grow: 1;
+          white-space: nowrap;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .span-5 {
+          justify-content: space-between;
+          align-self: center;
+          border-radius: var(
+            --Advanced-Forms-Datepicker-Week-Names-Inline-List-Border-Radius,
+            999px
+          );
+          display: flex;
+          width: 100%;
+          max-width: 322px;
+          gap: 20px;
+          padding: 13px 17px;
+        }
+        .div-13 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-14 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-15 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-16 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-17 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-18 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-19 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .span-6 {
+          align-self: center;
+          border-radius: var(
+            --Advanced-Forms-Datepicker-Week-Names-Inline-List-Border-Radius,
+            999px
+          );
+          display: flex;
+          width: 100%;
+          max-width: 322px;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 13px 17px;
+        }
+        .div-20 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-21 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-22 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-23 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-24 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-25 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-26 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .span-7 {
+          align-self: center;
+          border-radius: var(
+            --Advanced-Forms-Datepicker-Week-Names-Inline-List-Border-Radius,
+            999px
+          );
+          display: flex;
+          width: 322px;
+          max-width: 100%;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 13px 29px 13px 0;
+        }
+        .div-27 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          flex-grow: 1;
+          white-space: nowrap;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-28 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-29 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-30 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-31 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-32 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-33 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          flex-grow: 1;
+          white-space: nowrap;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .span-8 {
+          align-self: center;
+          border-radius: var(
+            --Advanced-Forms-Datepicker-Week-Names-Inline-List-Border-Radius,
+            999px
+          );
+          display: flex;
+          width: 322px;
+          max-width: 100%;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 13px 29px 13px 0;
+        }
+        .div-34 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          flex-grow: 1;
+          white-space: nowrap;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-35 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-36 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-37 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-38 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-39 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-40 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          flex-grow: 1;
+          white-space: nowrap;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .span-9 {
+          align-self: center;
+          border-radius: var(
+            --Advanced-Forms-Datepicker-Week-Names-Inline-List-Border-Radius,
+            999px
+          );
+          display: flex;
+          width: 100%;
+          max-width: 322px;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 13px 16px;
+        }
+        .div-41 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          flex-grow: 1;
+          white-space: nowrap;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-42 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-43 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-44 {
+          color: var(--Advanced-Forms-Datepicker-Date-Color, #1f2937);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-45 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-46 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-47 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          white-space: nowrap;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .span-10 {
+          align-self: center;
+          border-radius: var(
+            --Advanced-Forms-Datepicker-Week-Names-Inline-List-Border-Radius,
+            999px
+          );
+          display: flex;
+          width: 100%;
+          max-width: 322px;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 13px 17px;
+        }
+        .div-48 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-49 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-50 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-51 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-52 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-53 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-54 {
+          color: var(--Advanced-Forms-Datepicker-Date-Disabled-Color, #d1d5db);
+          letter-spacing: 0.07px;
+          font: 500 14px/143% Inter, sans-serif;
+        }
+        .div-55 {
+          align-self: stretch;
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: var(--Advanced-Forms-Datepicker-Border-Color, #e5e7eb);
+          display: flex;
+          margin-top: 20px;
+          height: 1px;
+          flex-direction: column;
+        }
+        .div-56 {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #d5eee8;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: start;
+          padding: 49px 7px 0 0;
+        }
+        .span-11 {
+          display: flex;
+          margin-left: 14px;
+          width: 265px;
+          max-width: 100%;
+          flex-direction: column;
+        }
+        .div-57 {
+          color: #000;
+          font: 700 32px Open Sans, sans-serif;
+        }
+        .div-58 {
+          color: #000;
+          margin-top: 15px;
+          font: 400 18px Open Sans, sans-serif;
+        }
+        .div-59 {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #e0e6f3;
+          align-self: stretch;
+          margin-top: 24px;
+          height: 1px;
+        }
+        .div-60 {
+          align-self: center;
+          display: flex;
+          margin-top: 18px;
+          width: 100%;
+          max-width: 302px;
+          align-items: start;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 0 20px;
+        }
+        .img-4 {
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          filter: drop-shadow(0px 6px 20px rgba(255, 255, 255, 0.4));
+          overflow: hidden;
+          flex: 1;
+        }
+        .img-5 {
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          overflow: hidden;
+          flex: 1;
+        }
+        .img-6 {
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          overflow: hidden;
+          flex: 1;
+        }
+      </style>
+      <script>
+        // JavaScript functions to handle clicks on days and images
+        function showDayDetails(day) {
+          // Add your logic to show details for the clicked day
+          console.log('Clicked on day:', day);
+        }
+
+        function handleImageClick(imageId) {
+          // Add your logic to handle clicks on images
+          console.log('Clicked on image:', imageId);
+        }
+      </script>      
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form action="your_login_endpoint" method="post" class="div">
+        <span class="span">Login</span>
+        <div class="div-2">
+          <span class="span-2">
+            <div class="div-3">Please enter your login credentials.</div>
+            <div class="div-8">Username:</div>
+            <input type="text" name="username" id="username" class="span-7" placeholder="YourUsername">
+            <div class="div-9">Password:</div>
+            <input type="password" name="password" id="password" class="span-8" placeholder="********">
+          </span>
+        </div>
+        <button type="submit" class="span-9">Login</button>
+    </form>
+    <style>
+        body {
+          background-color: #d5eee8;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+        .div {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #fff;
+          display: flex;
+          max-width: 480px;
+          width: 100%;
+          padding-bottom: 32px;
+          flex-direction: column;
+          margin: 0 auto;
+        }
+        .span {
+          color: #000;
+          white-space: nowrap;
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #d5eee8;
+          width: 100%;
+          justify-content: center;
+          align-items: start;
+          padding: 49px 60px 70px 32px;
+          font: 700 48px Open Sans, sans-serif;
+        }
+        .div-2 {
+          border-radius: var(--Components-Card-Border-Radius, 12px);
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Components-Card-Border-Color, #e5e7eb);
+          box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
+          align-self: center;
+          z-index: 1;
+          display: flex;
+          margin-top: -42px;
+          width: 100%;
+          max-width: 345px;
+          padding-bottom: 50px;
+          flex-direction: column;
+        }
+        .span-2 {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #fff;
+          display: flex;
+          margin-bottom: 58px;
+          flex-direction: column;
+          padding: 26px 26px 0 20px;
+        }
+        .div-3 {
+          color: #000;
+          white-space: nowrap;
+          font: 600 15px Open Sans, sans-serif;
+        }
+        .div-8, .div-9 {
+          color: var(--TailGrids-Black-Color, #212b36);
+          margin-top: 16px;
+          font: italic 600 14px/24px Open Sans, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        .span-7, .span-8 {
+          color: #3d3131;
+          white-space: nowrap;
+          align-items: start;
+          border-radius: 6px;
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Stroke, #dfe4ea);
+          background-color: var(--White-White, #fff);
+          margin-top: 10px;
+          justify-content: center;
+          padding: 11px 60px 11px 20px;
+          font: 400 14px/24px Open Sans, sans-serif;
+        }
+        .span-9 {
+          color: var(--White-White, #fff);
+          text-align: center;
+          white-space: nowrap;
+          justify-content: center;
+          border-radius: 6px;
+          background-color: #7d2d00;
+          align-self: center;
+          margin-top: 37px;
+          padding: 18px 32px;
+          font: 700 20px/120% Open Sans, sans-serif;
+          cursor: pointer;
+        }
+      </style>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+</head>
+<body>
+    <div class="div">
+        <span class="span">Sign Up</span>
+        <div class="div-2">
+          <span class="span-2">
+            <div class="div-3">Please enter the following information.</div>
+            <div class="div-4">First name:</div>
+            <input type="text" id="first-name" class="span-3" placeholder="John">
+            <div class="div-5">Last name:</div>
+            <input type="text" id="last-name" class="span-4" placeholder="Smith">
+            <div class="div-6">Age:</div>
+            <input type="text" id="age" class="span-5" placeholder="20">
+            <div class="div-7">Location:</div>
+            <input type="text" id="location" class="span-6" placeholder="The Varsity">
+            <div class="div-8">Email:</div>
+            <input type="email" id="email" class="span-7" placeholder="johnsmithemail123@gmail.com">
+            <div class="div-9">Username:</div>
+            <input type="text" id="username" class="span-8" placeholder="johnsmith123">
+          </span>
+        </div>
+        <button class="span-9">Submit</button>
+      </div>
+      <style>
+        .div {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #fff;
+          display: flex;
+          max-width: 480px;
+          width: 100%;
+          padding-bottom: 32px;
+          flex-direction: column;
+          margin: 0 auto;
+        }
+        .span {
+          color: #000;
+          white-space: nowrap;
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #d5eee8;
+          width: 100%;
+          justify-content: center;
+          align-items: start;
+          padding: 49px 60px 70px 32px;
+          font: 700 48px Open Sans, sans-serif;
+        }
+        .div-2 {
+          border-radius: var(--Components-Card-Border-Radius, 12px);
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Components-Card-Border-Color, #e5e7eb);
+          box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
+          align-self: center;
+          z-index: 1;
+          display: flex;
+          margin-top: -42px;
+          width: 100%;
+          max-width: 345px;
+          padding-bottom: 50px;
+          flex-direction: column;
+        }
+        .span-2 {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #fff;
+          display: flex;
+          margin-bottom: 58px;
+          flex-direction: column;
+          padding: 26px 26px 0 20px;
+        }
+        .div-3 {
+          color: #000;
+          white-space: nowrap;
+          font: 600 15px Open Sans, sans-serif;
+        }
+        .div-4 {
+          color: var(--TailGrids-Black-Color, #212b36);
+          margin-top: 17px;
+          font: italic 600 14px/24px Open Sans, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        .span-3 {
+          color: #3d3131;
+          text-decoration-line: underline;
+          white-space: nowrap;
+          align-items: start;
+          border-radius: 6px;
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Stroke, #dfe4ea);
+          background-color: var(--White-White, #fff);
+          margin-top: 10px;
+          justify-content: center;
+          padding: 11px 60px 11px 20px;
+          font: 400 14px/24px Open Sans, sans-serif;
+        }
+        .div-5 {
+          color: var(--TailGrids-Black-Color, #212b36);
+          margin-top: 16px;
+          font: italic 600 14px/24px Open Sans, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        .span-4 {
+          color: #3d3131;
+          text-decoration-line: underline;
+          white-space: nowrap;
+          align-items: start;
+          border-radius: 6px;
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Stroke, #dfe4ea);
+          background-color: var(--White-White, #fff);
+          margin-top: 10px;
+          justify-content: center;
+          padding: 11px 60px 11px 20px;
+          font: 400 14px/24px Open Sans, sans-serif;
+        }
+        .div-6 {
+          color: var(--TailGrids-Black-Color, #212b36);
+          margin-top: 16px;
+          font: italic 600 14px/24px Open Sans, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        .span-5 {
+          color: #3d3131;
+          white-space: nowrap;
+          align-items: start;
+          border-radius: 6px;
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Stroke, #dfe4ea);
+          background-color: var(--White-White, #fff);
+          margin-top: 10px;
+          justify-content: center;
+          padding: 11px 60px 11px 20px;
+          font: 400 14px/24px Open Sans, sans-serif;
+        }
+        .div-7 {
+          color: var(--TailGrids-Black-Color, #212b36);
+          margin-top: 16px;
+          font: italic 600 14px/24px Open Sans, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        .span-6 {
+          color: #3d3131;
+          white-space: nowrap;
+          align-items: start;
+          border-radius: 6px;
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Stroke, #dfe4ea);
+          background-color: var(--White-White, #fff);
+          margin-top: 10px;
+          justify-content: center;
+          padding: 11px 60px 11px 20px;
+          font: 400 14px/24px Open Sans, sans-serif;
+        }
+        .div-8 {
+          color: var(--TailGrids-Black-Color, #212b36);
+          margin-top: 16px;
+          font: italic 600 14px/24px Open Sans, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        .span-7 {
+          color: #3d3131;
+          white-space: nowrap;
+          align-items: start;
+          border-radius: 6px;
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Stroke, #dfe4ea);
+          background-color: var(--White-White, #fff);
+          margin-top: 10px;
+          justify-content: center;
+          padding: 11px 60px 11px 20px;
+          font: 400 14px/24px Open Sans, sans-serif;
+        }
+        .div-9 {
+          color: var(--TailGrids-Black-Color, #212b36);
+          margin-top: 16px;
+          font: italic 600 14px/24px Open Sans, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        .span-8 {
+          color: #3d3131;
+          white-space: nowrap;
+          align-items: start;
+          border-radius: 6px;
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Stroke, #dfe4ea);
+          background-color: var(--White-White, #fff);
+          margin-top: 10px;
+          justify-content: center;
+          padding: 9px 60px 9px 20px;
+          font: 400 14px/24px Open Sans, sans-serif;
+        }
+        .span-9 {
+          color: var(--White-White, #fff);
+          text-align: center;
+          white-space: nowrap;
+          justify-content: center;
+          border-radius: 6px;
+          background-color: #7d2d00;
+          align-self: center;
+          margin-top: 37px;
+          padding: 18px 32px;
+          font: 700 20px/120% Open Sans, sans-serif;
+        }
+        input.span-3, input.span-4 {
+          text-decoration: none; /* Remove underline */
+        }
+      </style>
+      
+</body>
+</html>

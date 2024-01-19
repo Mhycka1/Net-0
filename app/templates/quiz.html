@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Quiz</title>
+</head>
+<body>
+    <div class="div">
+        <span class="span">Carbon Footprint Quiz</span>
+        <div class="div-2">
+          <span class="span-2">
+            <div class="div-3">Please answer the following questions:</div>
+            <div class="div-4">What is your monthly electric bill?</div>
+            <input type="text" id="electric-bill" class="span-3" placeholder="Enter amount">
+            <div class="div-5">What is your monthly gas bill?</div>
+            <input type="text" id="gas-bill" class="span-4" placeholder="Enter amount">
+            <div class="div-6">What is your monthly oil bill?</div>
+            <input type="text" id="oil-bill" class="span-5" placeholder="Enter amount">
+            <div class="div-7">What is your yearly car mileage (if applicable)?</div>
+            <input type="text" id="car-mileage" class="span-6" placeholder="Enter mileage">
+            <div class="div-8">How many flights have you taken in the past year (4 hours or less)?</div>
+            <input type="text" id="flights-less-than-4-hours" class="span-7" placeholder="Enter number">
+            <div class="div-9">How many flights have you taken in the past year (4 hours or more)?</div>
+            <input type="text" id="flights-more-than-4-hours" class="span-8" placeholder="Enter number">
+            <div class="div-10">Do you recycle newspaper? (y/n)</div>
+            <input type="text" id="recycle-newspaper" class="span-9" placeholder="Enter y/n">
+            <div class="div-11">Do you recycle aluminum and tin? (y/n)</div>
+            <input type="text" id="recycle-aluminum-tin" class="span-10" placeholder="Enter y/n">
+            <button class="span-11">Submit</button>
+          </span>
+        </div>
+      </div>
+      <style>
+        .div {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #fff;
+          display: flex;
+          max-width: 480px;
+          width: 100%;
+          padding-bottom: 32px;
+          flex-direction: column;
+          margin: 0 auto;
+        }
+        .span {
+          color: #000;
+          white-space: nowrap;
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #d5eee8;
+          width: 100%;
+          justify-content: center;
+          align-items: start;
+          padding: 49px 60px 70px 32px;
+          font: 700 48px Open Sans, sans-serif;
+        }
+        .div-2 {
+          border-radius: var(--Components-Card-Border-Radius, 12px);
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Components-Card-Border-Color, #e5e7eb);
+          box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
+          align-self: center;
+          z-index: 1;
+          display: flex;
+          margin-top: -42px;
+          width: 100%;
+          max-width: 345px;
+          padding-bottom: 50px;
+          flex-direction: column;
+        }
+        .span-2 {
+          border-radius: var(--Basic-Forms-Input-Underline-Border-Radius, 0px);
+          background-color: #fff;
+          display: flex;
+          margin-bottom: 58px;
+          flex-direction: column;
+          padding: 26px 26px 0 20px;
+        }
+        .div-3 {
+          color: #000;
+          white-space: nowrap;
+          font: 600 15px Open Sans, sans-serif;
+        }
+        .div-4,
+        .div-5,
+        .div-6,
+        .div-7,
+        .div-8,
+        .div-9,
+        .div-10,
+        .div-11 {
+          color: var(--TailGrids-Black-Color, #212b36);
+          margin-top: 16px;
+          font: italic 600 14px/24px Open Sans, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        .span-3,
+        .span-4,
+        .span-5,
+        .span-6,
+        .span-7,
+        .span-8,
+        .span-9,
+        .span-10 {
+          color: #3d3131;
+          white-space: nowrap;
+          align-items: start;
+          border-radius: 6px;
+          border: var(--Basic-Forms-Input-Underline-Border-Radius, 1px) solid
+            var(--Stroke, #dfe4ea);
+          background-color: var(--White-White, #fff);
+          margin-top: 10px;
+          justify-content: center;
+          padding: 11px 60px 11px 20px;
+          font: 400 14px/24px Open Sans, sans-serif;
+        }
+        .span-10 {
+          margin-bottom: 20px; /* Adjust spacing for the last question */
+        }
+        .span-11 {
+          color: var(--White-White, #fff);
+          text-align: center;
+          white-space: nowrap;
+          justify-content: center;
+          border-radius: 6px;
+          background-color: #7d2d00;
+          align-self: center;
+          margin-top: 20px; /* Adjust spacing for the submit button */
+          padding: 18px 32px;
+          font: 700 20px/120% Open Sans, sans-serif;
+          cursor: pointer; /* Add cursor pointer for better UX */
+        }
+        input.span-3,
+        input.span-4,
+        input.span-5,
+        input.span-6,
+        input.span-7,
+        input.span-8,
+        input.span-9,
+        input.span-10 {
+          text-decoration: none; /* Remove underline */
+        }
+      </style>
+</body>
+</html>
