@@ -12,17 +12,54 @@
           <span class="span-2">
             <div class="div-3">Please enter the following information.</div>
             <div class="div-4">First name:</div>
-            <input type="text" id="first-name" class="span-3" placeholder="John">
+            <input 
+              type="text" 
+              id="first-name" 
+              name="first-name"
+              class="span-3" 
+              placeholder="John">
             <div class="div-5">Last name:</div>
-            <input type="text" id="last-name" class="span-4" placeholder="Smith">
+            <input 
+              type="text" 
+              id="last-name"
+              name="last-name" 
+              class="span-4" 
+              placeholder="Smith">
             <div class="div-6">Age:</div>
-            <input type="text" id="age" class="span-5" placeholder="20">
+            <input 
+              type="text" 
+              id="age"
+              name="age" 
+              class="span-5" 
+              placeholder="20">
             <div class="div-7">Location:</div>
-            <input type="text" id="location" class="span-6" placeholder="The Varsity">
+            <input 
+              type="text" 
+              id="location" 
+              name="location"
+              class="span-6" 
+              placeholder="The Varsity">
             <div class="div-8">Email:</div>
-            <input type="email" id="email" class="span-7" placeholder="johnsmithemail123@gmail.com">
+            <input 
+              type="email" 
+              id="email"
+              name="email" 
+              class="span-7" 
+              placeholder="johnsmithemail123@gmail.com">
             <div class="div-9">Username:</div>
-            <input type="text" id="username" class="span-8" placeholder="johnsmith123">
+            <input 
+              type="text" 
+              id="username" 
+              name="username"
+              class="span-8" 
+              placeholder="johnsmith123">
+            <div class="div-10">Password:</div>
+            <input
+              type="text"
+              id="password"
+              name="password"
+              class="span-8"
+              placeholder="johnsmithpassword">
           </span>
         </div>
         <button class="span-9">Submit</button>
@@ -203,6 +240,12 @@
           margin-top: 37px;
           padding: 18px 32px;
           font: 700 20px/120% Open Sans, sans-serif;
+        }
+        .div-10 {
+          color: var(--TailGrids-Black-Color, #212b36);
+          margin-top: 16px;
+          font: italic 600 14px/24px Open Sans, -apple-system, Roboto, Helvetica,
+            sans-serif;
         }
         input.span-3, input.span-4 {
           text-decoration: none; /* Remove underline */
