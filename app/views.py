@@ -13,12 +13,12 @@ def sign_up():
 @views.route('/quiz', methods=['GET', 'POST'])
 def quiz():
     if request.method == 'POST':
-        electric_bill = request.form.get('electric-bill') * 105
-        gas_bill = request.form.get('gas-bill') * 105
-        oil_bill = request.form.get('oil-bill') * 113
-        car_mileage = request.form.get('car-mileage') * .79
-        sub_4_flights = request.form.get('flights-less-than-4-hours') * 1100
-        over_4_flights = request.form.get('flights-more-than-4-hours') * 4,400
+        electric_bill = float(request.form.get('electric-bill')) * 105
+        gas_bill = float(request.form.get('gas-bill')) * 105
+        oil_bill = float(request.form.get('oil-bill')) * 113
+        car_mileage = float(request.form.get('car-mileage')) * 0.79
+        sub_4_flights = float(request.form.get('flights-less-than-4-hours')) * 1100
+        over_4_flights = float(request.form.get('flights-more-than-4-hours')) * 4400
         recycle_newspaper = request.form.get('recycle-newspaper')
         recycle_metal = request.form.get('recycle-aluminum-tin')
 
@@ -29,7 +29,7 @@ def quiz():
         
         if recycle_metal == 'n':
             footprint = footprint + 166
-
+        print(footprint)
 
     return render_template("quiz.html")
 
