@@ -9,6 +9,16 @@ def login():
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
+
+        user = User.query.filter_by(username=username).first()
+        if user:
+            if check_password_hash(user.password, password):
+                flash('Logged in successfully!', category='success')
+                return redirect(url_for('views.main_dashboard'))
+            else:
+                flash('Incorrect password, try again', category='error')
+        else:
+            flash('Incorrect username', category='error')
     return render_template("login.html")
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
@@ -23,7 +33,10 @@ def sign_up():
         username = request.form.get('username')
         password = request.form.get('password')
 
-        if firstname == None or len(firstname) < 2:
+        user = User.query.filter_by(username=username).first()
+        if user:
+            flash('Username is taken', category='error')
+        elif firstname == None or len(firstname) < 2:
             flash('First name must be greater than 2 characters', category='error')
         elif lastname == None or len(lastname) < 2:
             flash('Last name must be greater than 2 characters', category='error')
