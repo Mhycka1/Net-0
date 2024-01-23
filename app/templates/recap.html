@@ -16,13 +16,14 @@
             />
             <div class="div-2">Monthly Recap</div>
           </span>
+        
           <div class="div-3">
             This page gives you an overview of your progress towards being consistent
             in lowering your carbon footprint! Click a date on the calendar to show
             what suggestions you completed that day and past streak information.
           </div>
         </span>
-        <div class="div-4">
+        <div class="div-4 calendar">
           <span class="span-3">
             <img
               loading="lazy"
@@ -653,6 +654,15 @@
           overflow: hidden;
           flex: 1;
         }
+        .calendar {
+          border-radius: 20px; /* Rounded corners */
+          border: 2px solid rgba(255, 255, 255, 0.2); /* Border with transparency */
+          box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.25);
+          background-color: #fff;
+          padding: 20px; /* Adjust padding as needed */
+          margin-top: 25px;
+        }
+        
       </style>
       <script>
         // JavaScript functions to handle clicks on days and images
